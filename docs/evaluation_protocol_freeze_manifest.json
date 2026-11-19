@@ -1,0 +1,150 @@
+{
+  "protocol_id": "DS-A5-Evaluation-Protocol-v1.0",
+  "status": "FROZEN",
+  "freeze_timestamp_utc": "2026-11-19T00:56:25.076916+00:00",
+  "approval": "User approved following independent ChatGPT analysis; approval is documented in docs/ai_use_log.md.",
+  "dataset": {
+    "name": "MetroPT-3",
+    "source_page": "https://archive.ics.uci.edu/dataset/791/metropt3%2Bdataset",
+    "license": "CC BY 4.0",
+    "file": "data/raw/metropt3/MetroPT3(AirCompressor).csv",
+    "sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24"
+  },
+  "target": {
+    "field": "TP2",
+    "unit": "bar",
+    "horizon_seconds": 600,
+    "matching": "Earliest observed timestamp in [issue+600s, issue+605s]"
+  },
+  "gap_rule": {
+    "max_adjacent_gap_seconds": 60,
+    "applies_to": [
+      "issue-to-target segment",
+      "required feature-history segment"
+    ]
+  },
+  "features": {
+    "ordered": [
+      "TP2_lag_10s",
+      "TP2_lag_60s",
+      "TP2_lag_300s",
+      "TP3_lag_60s",
+      "TP3_lag_300s",
+      "Motor_current_lag_60s",
+      "Motor_current_lag_300s"
+    ],
+    "lookup": "Latest observation at or before issue-lag; age 0..5 seconds; finite; past-only; no interpolation; no prohibited gap."
+  },
+  "baselines": {
+    "persistence": "Latest finite TP2 at/before issue, age <=5s, no >60s gap in its history segment.",
+    "seasonal_naive": "reference=issue+600s-24h; latest observation at/before reference, age 0..5s, finite TP2 and available by issue; single reference row only, no whole-day continuity requirement; unavailable remains unavailable."
+  },
+  "model": {
+    "estimator": "sklearn.linear_model.Ridge",
+    "alpha": 1.0,
+    "fit_intercept": true,
+    "solver": "svd",
+    "preprocessing": "StandardScaler fitted on eligible training X per origin",
+    "target_scaling": false,
+    "tuning": false
+  },
+  "evaluation": {
+    "scheme": "expanding rolling-origin",
+    "development_origins": [
+      "2020-03-01",
+      "2020-04-01",
+      "2020-05-01",
+      "2020-06-01",
+      "2020-07-01"
+    ],
+    "development_window_days": 14,
+    "final_windows": [
+      {
+        "id": "F1",
+        "start_inclusive": "2020-08-01",
+        "end_exclusive": "2020-08-06"
+      },
+      {
+        "id": "F2",
+        "start_inclusive": "2020-08-07",
+        "end_exclusive": "2020-08-12"
+      },
+      {
+        "id": "F3",
+        "start_inclusive": "2020-08-13",
+        "end_exclusive": "2020-08-18"
+      },
+      {
+        "id": "F4",
+        "start_inclusive": "2020-08-19",
+        "end_exclusive": "2020-08-24"
+      },
+      {
+        "id": "F5",
+        "start_inclusive": "2020-08-25",
+        "end_exclusive": "2020-08-30"
+      }
+    ],
+    "training_issue": "< origin",
+    "training_label": "actual matched timestamp <= origin",
+    "evaluation_issue": "[origin,end)",
+    "evaluation_label": "actual matched timestamp < end",
+    "metrics": [
+      "MAE",
+      "RMSE"
+    ],
+    "comparison": "method-specific coverage and metrics plus common target timestamp population"
+  },
+  "document_sha256": {
+    "docs/evaluation_protocol_v1.md": "3cce2f55892e8355c27e5fa1721d4d81a8f3dd70b883e00d45501bc94725d6b3",
+    "docs/feature_availability.md": "389354c89c5855573343c211873571eb7502e145d764eca5682caae178ca3b34",
+    "docs/forecasting_task_definition.md": "5c2d10ec670f0ebcd09166f75c9e8c8ba9cbf1e90451d9c00a4ff98696540d49"
+  },
+  "diagnostics": {
+    "path": "results/audit/forecasting_task_diagnostics.json",
+    "sha256": "bf6ae08b38233a50575cf502847d470edc6ca70bec39e8605ce8a338a9d83ef0"
+  },
+  "source_script_sha256": {
+    "scripts/diagnose_forecast_task.py": "c4e9937f173c7a816cfbb32b52adefbb61fc7bc5c7b16468afc9915e2a2b9800",
+    "scripts/temporal_rules.py": "0a3d164e6274f85d4a840bc918f03326643a939534f6129f0b40614f036b68ec",
+    "scripts/audit_alternatives.py": "ccce8b1c818f2a2396fadad66dc6ad85c5805dac4e7cbbd12001e5ac9a406650",
+    "scripts/audit_noaa.py": "0d22bfd659a389e8731ca2ac7c3fed1d155adba130666f845a7d12da0e96c296"
+  },
+  "verification": {
+    "python": "3.10.18",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.1",
+      "scikit-learn": "1.7.1",
+      "pytest": "8.4.2"
+    },
+    "commands": [
+      {
+        "command": "conda run -n nussem1 python -m py_compile scripts/*.py tests/*.py",
+        "exit_code": 0
+      },
+      {
+        "command": "conda run -n nussem1 python -m pytest -q tests",
+        "exit_code": 0,
+        "result": "5 passed"
+      },
+      {
+        "command": "conda run -n nussem1 python -c \"verify diagnostic script/data hashes\"",
+        "exit_code": 0,
+        "result": "PASS"
+      },
+      {
+        "command": "shasum -a 256 'data/raw/metropt3/MetroPT3(AirCompressor).csv'",
+        "exit_code": 0,
+        "result": "matches expected hash"
+      }
+    ]
+  },
+  "assumptions_and_limits": [
+    "Historical publication latency is unverified; retrospective zero-additional-latency assumption only.",
+    "Timestamp timezone and device clock accuracy are unverified.",
+    "No forecasting model or final evaluation has been independently verified.",
+    "Final period target values and forecasting errors were not inspected during protocol freeze."
+  ],
+  "ai_use_log": "docs/ai_use_log.md"
+}

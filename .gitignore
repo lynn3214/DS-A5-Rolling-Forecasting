@@ -1,0 +1,32 @@
+# Original and temporary data: never commit user-provided or downloaded datasets.
+data/raw/
+data/**/*.csv
+data/**/*.xlsx
+data/**/*.zip
+*.part
+*.download
+
+# Python and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+conda-env/
+.env
+.env.*
+!.env.example
+
+# Local OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*~

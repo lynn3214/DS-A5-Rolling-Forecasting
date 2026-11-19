@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.1",
+  "diagnostic_version": "3.0.0",
+  "input_sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "script_sha256": "c4e9937f173c7a816cfbb32b52adefbb61fc7bc5c7b16468afc9915e2a2b9800",
+  "input_bytes": 218300507,
+  "execution_utc": "2026-11-18T12:10:25.503438+00:00",
+  "command": "conda run -n nussem1 python scripts/diagnose_forecast_task.py",
+  "development_cutoff_exclusive": "2020-08-01T00:00:00",
+  "development_rows": 1295984,
+  "timestamp_timezone": "naive/unknown",
+  "matching_rule": "earliest observation in [issue+horizon, issue+horizon+5s]",
+  "gap_threshold_seconds": 60.0,
+  "horizons": {
+    "10": {
+      "issue_count": 1295984,
+      "target_match_count": 1186726,
+      "missing_match_count": 109258,
+      "eligible_pair_count": 1186726,
+      "gap_exclusions": 0,
+      "invalid_issue_or_target_value_count": 0,
+      "coverage_denominator": 1295984,
+      "coverage": 0.9156949468511957,
+      "pair_correlation": 0.945986265401094,
+      "correlation_pair_count": 1186726,
+      "abs_change_quantiles": {
+        "0": 0.0,
+        "0.5": 0.0019999999999989002,
+        "0.9": 0.16600000000000037,
+        "0.99": 6.327999999999999,
+        "1": 10.696
+      },
+      "origins": [
+        {
+          "origin": "2020-03-01",
+          "evaluation_end_exclusive": "2020-03-15",
+          "training_pairs": 196034,
+          "evaluation_pairs": 94389
+        },
+        {
+          "origin": "2020-04-01",
+          "evaluation_end_exclusive": "2020-04-15",
+          "training_pairs": 406282,
+          "evaluation_pairs": 86216
+        },
+        {
+          "origin": "2020-05-01",
+          "evaluation_end_exclusive": "2020-05-15",
+          "training_pairs": 588500,
+          "evaluation_pairs": 87422
+        },
+        {
+          "origin": "2020-06-01",
+          "evaluation_end_exclusive": "2020-06-15",
+          "training_pairs": 783708,
+          "evaluation_pairs": 95068
+        },
+        {
+          "origin": "2020-07-01",
+          "evaluation_end_exclusive": "2020-07-15",
+          "training_pairs": 983250,
+          "evaluation_pairs": 84371
+        }
+      ]
+    },
+    "600": {
+      "issue_count": 1295984,
+      "target_match_count": 1275523,
+      "missing_match_count": 20461,
+      "eligible_pair_count": 1273871,
+      "gap_exclusions": 1652,
+      "invalid_issue_or_target_value_count": 0,
+      "coverage_denominator": 1295984,
+      "coverage": 0.9829372893492512,
+      "pair_correlation": 0.2546600758237775,
+      "correlation_pair_count": 1273871,
+      "abs_change_quantiles": {
+        "0": 0.0,
+        "0.5": 0.002000000000002399,
+        "0.9": 9.408000000000001,
+        "0.99": 10.450000000000001,
+        "1": 10.688
+      },
+      "origins": [
+        {
+          "origin": "2020-03-01",
+          "evaluation_end_exclusive": "2020-03-15",
+          "training_pairs": 212356,
+          "evaluation_pairs": 101251
+        },
+        {
+          "origin": "2020-04-01",
+          "evaluation_end_exclusive": "2020-04-15",
+          "training_pairs": 439183,
+          "evaluation_pairs": 92351
+        },
+        {
+          "origin": "2020-05-01",
+          "evaluation_end_exclusive": "2020-05-15",
+          "training_pairs": 633965,
+          "evaluation_pairs": 94352
+        },
+        {
+          "origin": "2020-06-01",
+          "evaluation_end_exclusive": "2020-06-15",
+          "training_pairs": 842555,
+          "evaluation_pairs": 102327
+        },
+        {
+          "origin": "2020-07-01",
+          "evaluation_end_exclusive": "2020-07-15",
+          "training_pairs": 1055970,
+          "evaluation_pairs": 90357
+        }
+      ]
+    },
+    "3600": {
+      "issue_count": 1295984,
+      "target_match_count": 95214,
+      "missing_match_count": 1200770,
+      "eligible_pair_count": 78710,
+      "gap_exclusions": 16504,
+      "invalid_issue_or_target_value_count": 0,
+      "coverage_denominator": 1295984,
+      "coverage": 0.0607337744910431,
+      "pair_correlation": 0.39171170356919605,
+      "correlation_pair_count": 78710,
+      "abs_change_quantiles": {
+        "0": 0.0,
+        "0.5": 0.0019999999999989002,
+        "0.9": 9.053999999999998,
+        "0.99": 10.424,
+        "1": 10.622
+      },
+      "origins": [
+        {
+          "origin": "2020-03-01",
+          "evaluation_end_exclusive": "2020-03-15",
+          "training_pairs": 10637,
+          "evaluation_pairs": 5807
+        },
+        {
+          "origin": "2020-04-01",
+          "evaluation_end_exclusive": "2020-04-15",
+          "training_pairs": 22767,
+          "evaluation_pairs": 4239
+        },
+        {
+          "origin": "2020-05-01",
+          "evaluation_end_exclusive": "2020-05-15",
+          "training_pairs": 32749,
+          "evaluation_pairs": 4924
+        },
+        {
+          "origin": "2020-06-01",
+          "evaluation_end_exclusive": "2020-06-15",
+          "training_pairs": 52349,
+          "evaluation_pairs": 5657
+        },
+        {
+          "origin": "2020-07-01",
+          "evaluation_end_exclusive": "2020-07-15",
+          "training_pairs": 63768,
+          "evaluation_pairs": 5933
+        }
+      ],
+      "matching_diagnostic": {
+        "first_subsequent_delay_quantiles_seconds": {
+          "0": 0.0,
+          "0.5": 8.0,
+          "0.9": 9.0,
+          "0.99": 15094.05000000028,
+          "1": 172916.0
+        },
+        "first_subsequent_within_tolerance_fraction": 0.0734891403343573,
+        "unmatched_sample_issue_timestamps": [
+          "2020-02-01T00:00:00.000000000",
+          "2020-02-09T13:56:41.000000000",
+          "2020-02-17T19:57:26.000000000",
+          "2020-02-26T05:34:43.000000000",
+          "2020-03-06T07:22:52.000000000",
+          "2020-03-15T16:35:40.000000000",
+          "2020-03-23T22:05:33.000000000",
+          "2020-04-01T09:34:57.000000000",
+          "2020-04-10T16:19:06.000000000",
+          "2020-04-19T16:51:16.000000000",
+          "2020-04-29T23:59:00.000000000",
+          "2020-05-09T10:58:51.000000000",
+          "2020-05-19T06:08:26.000000000",
+          "2020-05-30T00:12:35.000000000",
+          "2020-06-07T08:48:45.000000000",
+          "2020-06-16T02:57:54.000000000",
+          "2020-06-24T19:57:27.000000000",
+          "2020-07-04T00:35:08.000000000",
+          "2020-07-14T06:59:46.000000000",
+          "2020-07-22T18:23:09.000000000"
+        ],
+        "issue_phase_mod_3600_seconds_quantiles": {
+          "0": 0.0,
+          "0.25": 867.0,
+          "0.5": 1797.0,
+          "0.75": 2718.0,
+          "1": 3599.0
+        }
+      }
+    }
+  },
+  "final_timestamp_windows": [
+    {
+      "id": "F1",
+      "start_inclusive": "2020-08-01",
+      "end_exclusive": "2020-08-06",
+      "timestamp_count": 28576,
+      "first": "2020-08-01T00:00:02.000000000",
+      "last": "2020-08-05T23:59:53.000000000",
+      "label_count": "NOT_INSPECTED"
+    },
+    {
+      "id": "F2",
+      "start_inclusive": "2020-08-07",
+      "end_exclusive": "2020-08-12",
+      "timestamp_count": 40143,
+      "first": "2020-08-07T00:00:03.000000000",
+      "last": "2020-08-11T20:13:31.000000000",
+      "label_count": "NOT_INSPECTED"
+    },
+    {
+      "id": "F3",
+      "start_inclusive": "2020-08-13",
+      "end_exclusive": "2020-08-18",
+      "timestamp_count": 37069,
+      "first": "2020-08-13T00:00:09.000000000",
+      "last": "2020-08-17T23:59:50.000000000",
+      "label_count": "NOT_INSPECTED"
+    },
+    {
+      "id": "F4",
+      "start_inclusive": "2020-08-19",
+      "end_exclusive": "2020-08-24",
+      "timestamp_count": 29165,
+      "first": "2020-08-19T00:00:04.000000000",
+      "last": "2020-08-23T23:59:58.000000000",
+      "label_count": "NOT_INSPECTED"
+    },
+    {
+      "id": "F5",
+      "start_inclusive": "2020-08-25",
+      "end_exclusive": "2020-08-30",
+      "timestamp_count": 37251,
+      "first": "2020-08-25T00:51:11.000000000",
+      "last": "2020-08-29T23:59:52.000000000",
+      "label_count": "NOT_INSPECTED"
+    }
+  ],
+  "final_target_values_loaded": false,
+  "runtime_seconds": 4.183113332997891
+}
