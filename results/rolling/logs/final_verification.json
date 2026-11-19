@@ -1,0 +1,16 @@
+{
+  "phase": "final",
+  "status": "PASS",
+  "checks": [
+    "three methods per candidate issue",
+    "method row completeness",
+    "target indices, labels, future-only tolerance independently match original data",
+    "prediction finite/unavailable consistency",
+    "fold counts, scaler rows, fixed Ridge params, common target IDs",
+    "pooled MAE/RMSE independently recomputed from saved prediction rows"
+  ],
+  "prediction_file_sha256": "e2cdf4de6f838f8f06d241149e514d09bc33e0192ac5073b7d1e02e83a12db41",
+  "metrics_file_sha256": "6af02ab6d02e491b622f66d3b0b45b62a871a6c264f917c92d519ced2f9f4d11",
+  "rows": 516612
+}
+

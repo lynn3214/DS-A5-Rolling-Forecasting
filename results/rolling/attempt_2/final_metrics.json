@@ -1,0 +1,388 @@
+{
+  "origins": [
+    {
+      "origin_id": "F1",
+      "status": "COMPLETED",
+      "start_inclusive": "2020-08-01",
+      "end_exclusive": "2020-08-06",
+      "candidate_issue_count": 28576,
+      "valid_target_pair_count": 28036,
+      "training_target_eligible_count": 1273871,
+      "training_feature_eligible_count": 46711,
+      "training_sample_count": 46711,
+      "scaler_fit_row_count": 46711,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 28576,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 28036,
+          "count": 28036,
+          "mae": 2.000310671993152,
+          "rmse": 4.3333432569348345
+        },
+        "seasonal_naive": {
+          "prediction_count": 8272,
+          "coverage_candidate_issues": 0.2894736842105263,
+          "valid_scored_count": 8121,
+          "count": 8121,
+          "mae": 1.8838096293559907,
+          "rmse": 4.207528302396321
+        },
+        "ridge": {
+          "prediction_count": 17,
+          "coverage_candidate_issues": 0.0005949048152295633,
+          "valid_scored_count": 17,
+          "count": 17,
+          "mae": 2.4596524500116677,
+          "rmse": 3.689288940393957
+        }
+      },
+      "common_target_count": 0,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "seasonal_naive": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "ridge": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      }
+    },
+    {
+      "origin_id": "F2",
+      "status": "COMPLETED",
+      "start_inclusive": "2020-08-07",
+      "end_exclusive": "2020-08-12",
+      "candidate_issue_count": 40143,
+      "valid_target_pair_count": 39519,
+      "training_target_eligible_count": 1310538,
+      "training_feature_eligible_count": 46728,
+      "training_sample_count": 46728,
+      "scaler_fit_row_count": 46728,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 40143,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 39519,
+          "count": 39519,
+          "mae": 2.0272908221361874,
+          "rmse": 4.368346615858139
+        },
+        "seasonal_naive": {
+          "prediction_count": 23321,
+          "coverage_candidate_issues": 0.5809481105049448,
+          "valid_scored_count": 22979,
+          "count": 22979,
+          "mae": 1.9023377866747904,
+          "rmse": 4.223934785185282
+        },
+        "ridge": {
+          "prediction_count": 25,
+          "coverage_candidate_issues": 0.0006227735844356425,
+          "valid_scored_count": 21,
+          "count": 21,
+          "mae": 0.23311971750307117,
+          "rmse": 0.44930194939205537
+        }
+      },
+      "common_target_count": 18,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 18,
+          "mae": 0.0017777777777779667,
+          "rmse": 0.00240370085030946
+        },
+        "seasonal_naive": {
+          "count": 18,
+          "mae": 2.100444444444444,
+          "rmse": 4.452410632954292
+        },
+        "ridge": {
+          "count": 18,
+          "mae": 0.2526001140779626,
+          "rmse": 0.4829000381325696
+        }
+      }
+    },
+    {
+      "origin_id": "F3",
+      "status": "COMPLETED",
+      "start_inclusive": "2020-08-13",
+      "end_exclusive": "2020-08-18",
+      "candidate_issue_count": 37069,
+      "valid_target_pair_count": 36435,
+      "training_target_eligible_count": 1358562,
+      "training_feature_eligible_count": 46749,
+      "training_sample_count": 46749,
+      "scaler_fit_row_count": 46749,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 37069,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 36435,
+          "count": 36435,
+          "mae": 2.2032026348291476,
+          "rmse": 4.542513712804193
+        },
+        "seasonal_naive": {
+          "prediction_count": 13978,
+          "coverage_candidate_issues": 0.37708057945992607,
+          "valid_scored_count": 13743,
+          "count": 13743,
+          "mae": 1.8802810157898568,
+          "rmse": 4.183556207523934
+        },
+        "ridge": {
+          "prediction_count": 9,
+          "coverage_candidate_issues": 0.0002427904718228169,
+          "valid_scored_count": 9,
+          "count": 9,
+          "mae": 1.7841136400249151,
+          "rmse": 2.9442834887961786
+        }
+      },
+      "common_target_count": 9,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 9,
+          "mae": 3.1986666666666665,
+          "rmse": 5.53764667224866
+        },
+        "seasonal_naive": {
+          "count": 9,
+          "mae": 0.0017777777777779667,
+          "rmse": 0.0024944382578494808
+        },
+        "ridge": {
+          "count": 9,
+          "mae": 1.7841136400249151,
+          "rmse": 2.9442834887961786
+        }
+      }
+    },
+    {
+      "origin_id": "F4",
+      "status": "COMPLETED",
+      "start_inclusive": "2020-08-19",
+      "end_exclusive": "2020-08-24",
+      "candidate_issue_count": 29165,
+      "valid_target_pair_count": 28560,
+      "training_target_eligible_count": 1402887,
+      "training_feature_eligible_count": 46784,
+      "training_sample_count": 46784,
+      "scaler_fit_row_count": 46784,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 29165,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 28560,
+          "count": 28560,
+          "mae": 2.3918771008403366,
+          "rmse": 4.727789620613286
+        },
+        "seasonal_naive": {
+          "prediction_count": 13647,
+          "coverage_candidate_issues": 0.4679238813646494,
+          "valid_scored_count": 13428,
+          "count": 13428,
+          "mae": 2.218833780160858,
+          "rmse": 4.553811357299196
+        },
+        "ridge": {
+          "prediction_count": 17,
+          "coverage_candidate_issues": 0.0005828904508829076,
+          "valid_scored_count": 17,
+          "count": 17,
+          "mae": 0.7365029756096021,
+          "rmse": 1.1006501733385161
+        }
+      },
+      "common_target_count": 0,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "seasonal_naive": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "ridge": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      }
+    },
+    {
+      "origin_id": "F5",
+      "status": "COMPLETED",
+      "start_inclusive": "2020-08-25",
+      "end_exclusive": "2020-08-30",
+      "candidate_issue_count": 37251,
+      "valid_target_pair_count": 36665,
+      "training_target_eligible_count": 1440152,
+      "training_feature_eligible_count": 46801,
+      "training_sample_count": 46801,
+      "scaler_fit_row_count": 46801,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 37251,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 36665,
+          "count": 36665,
+          "mae": 2.3180901677348964,
+          "rmse": 4.67024050719989
+        },
+        "seasonal_naive": {
+          "prediction_count": 19201,
+          "coverage_candidate_issues": 0.5154492496845722,
+          "valid_scored_count": 18894,
+          "count": 18894,
+          "mae": 1.9756609505663176,
+          "rmse": 4.286638746721323
+        },
+        "ridge": {
+          "prediction_count": 0,
+          "coverage_candidate_issues": 0.0,
+          "valid_scored_count": 0,
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      },
+      "common_target_count": 0,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "seasonal_naive": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "ridge": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      }
+    }
+  ],
+  "pooled_method_specific": {
+    "persistence": {
+      "count": 169215,
+      "mae": 2.1852417929852557,
+      "rmse": 4.528711998178967
+    },
+    "ridge": {
+      "count": 64,
+      "mae": 1.1763621728648486,
+      "rmse": 2.2852700440954914
+    },
+    "seasonal_naive": {
+      "count": 77165,
+      "mae": 1.9694884727531916,
+      "rmse": 4.289655920288828
+    }
+  },
+  "pooled_common_targets": {
+    "persistence": {
+      "count": 27,
+      "mae": 1.0674074074074076,
+      "rmse": 3.1971623992858738
+    },
+    "ridge": {
+      "count": 27,
+      "mae": 0.7631046227269467,
+      "rmse": 1.7450109986334061
+    },
+    "seasonal_naive": {
+      "count": 27,
+      "mae": 1.400888888888889,
+      "rmse": 3.6353783439559217
+    }
+  }
+}

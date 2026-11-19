@@ -1,0 +1,293 @@
+[
+  {
+    "origin_id": "D1",
+    "status": "FAILED_NO_TRAINING_ROWS",
+    "failure_reason": "No issue rows met all frozen label/feature eligibility rules before origin.",
+    "training_target_eligible_count": 212356,
+    "training_feature_eligible_count": 0,
+    "training_sample_count": 0,
+    "candidate_issue_count": 103456,
+    "valid_target_pair_count": 101251
+  },
+  {
+    "origin_id": "D2",
+    "status": "COMPLETED",
+    "start_inclusive": "2020-04-01",
+    "end_exclusive": "2020-04-15",
+    "candidate_issue_count": 94505,
+    "valid_target_pair_count": 92351,
+    "training_target_eligible_count": 439183,
+    "training_feature_eligible_count": 158,
+    "training_sample_count": 158,
+    "scaler_fit_row_count": 158,
+    "ridge_features": [
+      "TP2_lag_10s",
+      "TP2_lag_60s",
+      "TP2_lag_300s",
+      "TP3_lag_60s",
+      "TP3_lag_300s",
+      "Motor_current_lag_60s",
+      "Motor_current_lag_300s"
+    ],
+    "ridge_params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "solver": "svd"
+    },
+    "method_metrics": {
+      "persistence": {
+        "prediction_count": 94505,
+        "coverage_candidate_issues": 1.0,
+        "valid_scored_count": 92351,
+        "count": 92351,
+        "mae": 1.6590723652153188,
+        "rmse": 3.8807018597737284
+      },
+      "seasonal_naive": {
+        "prediction_count": 33639,
+        "coverage_candidate_issues": 0.3559494206655732,
+        "valid_scored_count": 32743,
+        "count": 32743,
+        "mae": 1.9905727636441373,
+        "rmse": 4.264193819845328
+      },
+      "ridge": {
+        "prediction_count": 303,
+        "coverage_candidate_issues": 0.0032061795672186657,
+        "valid_scored_count": 230,
+        "count": 230,
+        "mae": 1.17270975163699,
+        "rmse": 1.6865359871132368
+      }
+    },
+    "common_target_count": 155,
+    "common_target_metrics": {
+      "persistence": {
+        "count": 155,
+        "mae": 0.38781935483870966,
+        "rmse": 1.845712436973864
+      },
+      "seasonal_naive": {
+        "count": 155,
+        "mae": 7.954412903225807,
+        "rmse": 8.547920335643994
+      },
+      "ridge": {
+        "count": 155,
+        "mae": 1.2856565884739934,
+        "rmse": 1.9431030303750483
+      }
+    }
+  },
+  {
+    "origin_id": "D3",
+    "status": "COMPLETED",
+    "start_inclusive": "2020-05-01",
+    "end_exclusive": "2020-05-15",
+    "candidate_issue_count": 95834,
+    "valid_target_pair_count": 94352,
+    "training_target_eligible_count": 633965,
+    "training_feature_eligible_count": 9986,
+    "training_sample_count": 9986,
+    "scaler_fit_row_count": 9986,
+    "ridge_features": [
+      "TP2_lag_10s",
+      "TP2_lag_60s",
+      "TP2_lag_300s",
+      "TP3_lag_60s",
+      "TP3_lag_300s",
+      "Motor_current_lag_60s",
+      "Motor_current_lag_300s"
+    ],
+    "ridge_params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "solver": "svd"
+    },
+    "method_metrics": {
+      "persistence": {
+        "prediction_count": 95834,
+        "coverage_candidate_issues": 1.0,
+        "valid_scored_count": 94352,
+        "count": 94352,
+        "mae": 1.3912905290825837,
+        "rmse": 3.5797922379089515
+      },
+      "seasonal_naive": {
+        "prediction_count": 51873,
+        "coverage_candidate_issues": 0.5412797128367802,
+        "valid_scored_count": 51326,
+        "count": 51326,
+        "mae": 1.8855942797022947,
+        "rmse": 4.004351793162549
+      },
+      "ridge": {
+        "prediction_count": 9,
+        "coverage_candidate_issues": 9.391239017467705e-05,
+        "valid_scored_count": 9,
+        "count": 9,
+        "mae": 0.2328302997996392,
+        "rmse": 0.24304354982254114
+      }
+    },
+    "common_target_count": 0,
+    "common_target_metrics": {
+      "persistence": {
+        "count": 0,
+        "mae": null,
+        "rmse": null
+      },
+      "seasonal_naive": {
+        "count": 0,
+        "mae": null,
+        "rmse": null
+      },
+      "ridge": {
+        "count": 0,
+        "mae": null,
+        "rmse": null
+      }
+    }
+  },
+  {
+    "origin_id": "D4",
+    "status": "COMPLETED",
+    "start_inclusive": "2020-06-01",
+    "end_exclusive": "2020-06-15",
+    "candidate_issue_count": 103774,
+    "valid_target_pair_count": 102327,
+    "training_target_eligible_count": 842555,
+    "training_feature_eligible_count": 21568,
+    "training_sample_count": 21568,
+    "scaler_fit_row_count": 21568,
+    "ridge_features": [
+      "TP2_lag_10s",
+      "TP2_lag_60s",
+      "TP2_lag_300s",
+      "TP3_lag_60s",
+      "TP3_lag_300s",
+      "Motor_current_lag_60s",
+      "Motor_current_lag_300s"
+    ],
+    "ridge_params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "solver": "svd"
+    },
+    "method_metrics": {
+      "persistence": {
+        "prediction_count": 103774,
+        "coverage_candidate_issues": 1.0,
+        "valid_scored_count": 102327,
+        "count": 102327,
+        "mae": 1.7896660119030166,
+        "rmse": 3.9789625756911153
+      },
+      "seasonal_naive": {
+        "prediction_count": 59543,
+        "coverage_candidate_issues": 0.5737757048971804,
+        "valid_scored_count": 58965,
+        "count": 58965,
+        "mae": 2.520299771050623,
+        "rmse": 4.647015953418973
+      },
+      "ridge": {
+        "prediction_count": 4096,
+        "coverage_candidate_issues": 0.03947038757299516,
+        "valid_scored_count": 4054,
+        "count": 4054,
+        "mae": 0.04144854791056113,
+        "rmse": 0.3056220182695894
+      }
+    },
+    "common_target_count": 2428,
+    "common_target_metrics": {
+      "persistence": {
+        "count": 2428,
+        "mae": 0.002896210873146622,
+        "rmse": 0.06231775406069835
+      },
+      "seasonal_naive": {
+        "count": 2428,
+        "mae": 1.1107693574958801,
+        "rmse": 3.2248001197269733
+      },
+      "ridge": {
+        "count": 2428,
+        "mae": 0.026403396051390915,
+        "rmse": 0.06428873669515947
+      }
+    }
+  },
+  {
+    "origin_id": "D5",
+    "status": "COMPLETED",
+    "start_inclusive": "2020-07-01",
+    "end_exclusive": "2020-07-15",
+    "candidate_issue_count": 92482,
+    "valid_target_pair_count": 90357,
+    "training_target_eligible_count": 1055970,
+    "training_feature_eligible_count": 42650,
+    "training_sample_count": 42650,
+    "scaler_fit_row_count": 42650,
+    "ridge_features": [
+      "TP2_lag_10s",
+      "TP2_lag_60s",
+      "TP2_lag_300s",
+      "TP3_lag_60s",
+      "TP3_lag_300s",
+      "Motor_current_lag_60s",
+      "Motor_current_lag_300s"
+    ],
+    "ridge_params": {
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "solver": "svd"
+    },
+    "method_metrics": {
+      "persistence": {
+        "prediction_count": 92482,
+        "coverage_candidate_issues": 1.0,
+        "valid_scored_count": 90357,
+        "count": 90357,
+        "mae": 2.4863625618380425,
+        "rmse": 4.817418582309647
+      },
+      "seasonal_naive": {
+        "prediction_count": 46086,
+        "coverage_candidate_issues": 0.4983239981834303,
+        "valid_scored_count": 45197,
+        "count": 45197,
+        "mae": 2.30324941920924,
+        "rmse": 4.6374689173823676
+      },
+      "ridge": {
+        "prediction_count": 47,
+        "coverage_candidate_issues": 0.0005082070024437187,
+        "valid_scored_count": 47,
+        "count": 47,
+        "mae": 2.36127525032739,
+        "rmse": 4.3688748663295405
+      }
+    },
+    "common_target_count": 23,
+    "common_target_metrics": {
+      "persistence": {
+        "count": 23,
+        "mae": 1.6706086956521742,
+        "rmse": 3.868506014291395
+      },
+      "seasonal_naive": {
+        "count": 23,
+        "mae": 1.671130434782609,
+        "rmse": 3.8691942763094858
+      },
+      "ridge": {
+        "count": 23,
+        "mae": 1.566152805359842,
+        "rmse": 3.584900420390329
+      }
+    }
+  }
+]
+

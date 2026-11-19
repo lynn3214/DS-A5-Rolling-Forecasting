@@ -6,6 +6,11 @@ data/**/*.zip
 *.part
 *.download
 
+# Large row-level rolling prediction exports are reproducible from saved code,
+# protocol, inputs, metrics, and manifests; preserve compact evidence instead.
+results/rolling/*_predictions.csv
+results/rolling/attempt_*/*_predictions.csv
+
 # Python and test artifacts
 __pycache__/
 *.py[cod]

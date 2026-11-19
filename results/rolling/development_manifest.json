@@ -1,0 +1,381 @@
+{
+  "phase": "development",
+  "protocol": "DS-A5-Evaluation-Protocol-v1.0",
+  "freeze_commit": "ca83f0a295a68337aebc070cfd481645418cda13",
+  "dataset_sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "source_code_sha256": {
+    "scripts/run_rolling_evaluation.py": "33ecc8bb9951fca2a04f30073d81f90a053b93693e6a3d9089e7c8cd59ab05dc",
+    "src/temporal.py": "a82fa010d00013679dcc0b3b3b0fed52a71f2f4b07677cd9b146d68a247799c0",
+    "src/rolling_evaluation.py": "ad00534e6e050721caf5e88ab3bd3e7dc5aa7ecdaa52eeb1de20c771e5562d70",
+    "src/metrics.py": "a7ccc73764d44923c2115637a81b4e7f7bcd8538554852c239a3a19105c851ef"
+  },
+  "rows_loaded": 1295984,
+  "python": "3.10.18",
+  "numpy": "2.2.6",
+  "pandas": "2.3.1",
+  "scipy": "1.15.2",
+  "sklearn": "1.7.1",
+  "numpy_config": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '18.1.8', 'commands': 'arm64-apple-darwin20.0.0-clang', 'args': '-ftree-vectorize, -fPIC, -fstack-protector-strong, -O2, -pipe, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/numpy_1747544633931/work=/usr/local/src/conda/numpy-2.2.6, -fdebug-prefix-map=/Users/jinshenhui/miniforge3/envs/nussem1=/usr/local/src/conda-prefix, -D_FORTIFY_SOURCE=2, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -mmacosx-version-min=11.0, -mmacosx-version-min=11.0', 'linker args': '-Wl,-headerpad_max_install_names, -Wl,-dead_strip_dylibs, -Wl,-rpath,/Users/jinshenhui/miniforge3/envs/nussem1/lib, -L/Users/jinshenhui/miniforge3/envs/nussem1/lib, -ftree-vectorize, -fPIC, -fstack-protector-strong, -O2, -pipe, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/numpy_1747544633931/work=/usr/local/src/conda/numpy-2.2.6, -fdebug-prefix-map=/Users/jinshenhui/miniforge3/envs/nussem1=/usr/local/src/conda-prefix, -D_FORTIFY_SOURCE=2, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -mmacosx-version-min=11.0, -mmacosx-version-min=11.0'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.1.0', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '18.1.8', 'commands': 'arm64-apple-darwin20.0.0-clang++', 'args': '-ftree-vectorize, -fPIC, -fstack-protector-strong, -O2, -pipe, -stdlib=libc++, -fvisibility-inlines-hidden, -fmessage-length=0, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/numpy_1747544633931/work=/usr/local/src/conda/numpy-2.2.6, -fdebug-prefix-map=/Users/jinshenhui/miniforge3/envs/nussem1=/usr/local/src/conda-prefix, -D_FORTIFY_SOURCE=2, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -mmacosx-version-min=11.0, -mmacosx-version-min=11.0', 'linker args': '-Wl,-headerpad_max_install_names, -Wl,-dead_strip_dylibs, -Wl,-rpath,/Users/jinshenhui/miniforge3/envs/nussem1/lib, -L/Users/jinshenhui/miniforge3/envs/nussem1/lib, -ftree-vectorize, -fPIC, -fstack-protector-strong, -O2, -pipe, -stdlib=libc++, -fvisibility-inlines-hidden, -fmessage-length=0, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/numpy_1747544633931/work=/usr/local/src/conda/numpy-2.2.6, -fdebug-prefix-map=/Users/jinshenhui/miniforge3/envs/nussem1=/usr/local/src/conda-prefix, -D_FORTIFY_SOURCE=2, -isystem, /Users/jinshenhui/miniforge3/envs/nussem1/include, -mmacosx-version-min=11.0, -mmacosx-version-min=11.0'}}, 'Machine Information': {'host': {'cpu': 'arm64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'cross-compiled': True}, 'Build Dependencies': {'blas': {'name': 'blas', 'found': True, 'version': '3.9.0', 'detection method': 'pkgconfig', 'include directory': '/Users/jinshenhui/miniforge3/envs/nussem1/include', 'lib directory': '/Users/jinshenhui/miniforge3/envs/nussem1/lib', 'openblas configuration': 'unknown', 'pc file directory': '/Users/jinshenhui/miniforge3/envs/nussem1/lib/pkgconfig'}, 'lapack': {'name': 'lapack', 'found': True, 'version': '3.9.0', 'detection method': 'pkgconfig', 'include directory': '/Users/jinshenhui/miniforge3/envs/nussem1/include', 'lib directory': '/Users/jinshenhui/miniforge3/envs/nussem1/lib', 'openblas configuration': 'unknown', 'pc file directory': '/Users/jinshenhui/miniforge3/envs/nussem1/lib/pkgconfig'}}, 'Python Information': {'path': '/Users/jinshenhui/miniforge3/envs/nussem1/bin/python', 'version': '3.10'}, 'SIMD Extensions': {'baseline': ['NEON', 'NEON_FP16', 'NEON_VFPV4', 'ASIMD'], 'found': ['ASIMDHP'], 'not found': ['ASIMDFHM']}}",
+  "command": "conda run -n nussem1 python scripts/run_rolling_evaluation.py --phase development",
+  "windows": [
+    {
+      "origin_id": "D1",
+      "status": "FAILED_NO_TRAINING_ROWS",
+      "failure_reason": "No issue rows met all frozen label/feature eligibility rules before origin.",
+      "training_target_eligible_count": 212356,
+      "training_feature_eligible_count": 0,
+      "start_inclusive": "2020-03-01",
+      "end_exclusive": "2020-03-15",
+      "candidate_issue_count": 103456,
+      "valid_target_pair_count": 101251,
+      "training_sample_count": 0,
+      "scaler_fit_row_count": 0,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 103456,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 101251,
+          "count": 101251,
+          "mae": 2.1439606522404717,
+          "rmse": 4.437052208393193
+        },
+        "seasonal_naive": {
+          "prediction_count": 56117,
+          "coverage_candidate_issues": 0.5424238323538509,
+          "valid_scored_count": 55179,
+          "count": 55179,
+          "mae": 2.940994218815128,
+          "rmse": 5.216171805094149
+        },
+        "ridge": {
+          "prediction_count": 0,
+          "coverage_candidate_issues": 0.0,
+          "valid_scored_count": 0,
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      },
+      "common_target_count": 0,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "seasonal_naive": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "ridge": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      }
+    },
+    {
+      "origin_id": "D2",
+      "status": "COMPLETED",
+      "failure_reason": null,
+      "training_target_eligible_count": 439183,
+      "training_feature_eligible_count": 158,
+      "start_inclusive": "2020-04-01",
+      "end_exclusive": "2020-04-15",
+      "candidate_issue_count": 94505,
+      "valid_target_pair_count": 92351,
+      "training_sample_count": 158,
+      "scaler_fit_row_count": 158,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 94505,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 92351,
+          "count": 92351,
+          "mae": 1.6590723652153188,
+          "rmse": 3.8807018597737284
+        },
+        "seasonal_naive": {
+          "prediction_count": 33639,
+          "coverage_candidate_issues": 0.3559494206655732,
+          "valid_scored_count": 32743,
+          "count": 32743,
+          "mae": 1.9905727636441373,
+          "rmse": 4.264193819845328
+        },
+        "ridge": {
+          "prediction_count": 303,
+          "coverage_candidate_issues": 0.0032061795672186657,
+          "valid_scored_count": 230,
+          "count": 230,
+          "mae": 1.17270975163699,
+          "rmse": 1.6865359871132368
+        }
+      },
+      "common_target_count": 155,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 155,
+          "mae": 0.38781935483870966,
+          "rmse": 1.845712436973864
+        },
+        "seasonal_naive": {
+          "count": 155,
+          "mae": 7.954412903225807,
+          "rmse": 8.547920335643994
+        },
+        "ridge": {
+          "count": 155,
+          "mae": 1.2856565884739934,
+          "rmse": 1.9431030303750483
+        }
+      }
+    },
+    {
+      "origin_id": "D3",
+      "status": "COMPLETED",
+      "failure_reason": null,
+      "training_target_eligible_count": 633965,
+      "training_feature_eligible_count": 9986,
+      "start_inclusive": "2020-05-01",
+      "end_exclusive": "2020-05-15",
+      "candidate_issue_count": 95834,
+      "valid_target_pair_count": 94352,
+      "training_sample_count": 9986,
+      "scaler_fit_row_count": 9986,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 95834,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 94352,
+          "count": 94352,
+          "mae": 1.3912905290825837,
+          "rmse": 3.5797922379089515
+        },
+        "seasonal_naive": {
+          "prediction_count": 51873,
+          "coverage_candidate_issues": 0.5412797128367802,
+          "valid_scored_count": 51326,
+          "count": 51326,
+          "mae": 1.8855942797022947,
+          "rmse": 4.004351793162549
+        },
+        "ridge": {
+          "prediction_count": 9,
+          "coverage_candidate_issues": 9.391239017467705e-05,
+          "valid_scored_count": 9,
+          "count": 9,
+          "mae": 0.2328302997996392,
+          "rmse": 0.24304354982254114
+        }
+      },
+      "common_target_count": 0,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "seasonal_naive": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        },
+        "ridge": {
+          "count": 0,
+          "mae": null,
+          "rmse": null
+        }
+      }
+    },
+    {
+      "origin_id": "D4",
+      "status": "COMPLETED",
+      "failure_reason": null,
+      "training_target_eligible_count": 842555,
+      "training_feature_eligible_count": 21568,
+      "start_inclusive": "2020-06-01",
+      "end_exclusive": "2020-06-15",
+      "candidate_issue_count": 103774,
+      "valid_target_pair_count": 102327,
+      "training_sample_count": 21568,
+      "scaler_fit_row_count": 21568,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 103774,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 102327,
+          "count": 102327,
+          "mae": 1.7896660119030166,
+          "rmse": 3.9789625756911153
+        },
+        "seasonal_naive": {
+          "prediction_count": 59543,
+          "coverage_candidate_issues": 0.5737757048971804,
+          "valid_scored_count": 58965,
+          "count": 58965,
+          "mae": 2.520299771050623,
+          "rmse": 4.647015953418973
+        },
+        "ridge": {
+          "prediction_count": 4096,
+          "coverage_candidate_issues": 0.03947038757299516,
+          "valid_scored_count": 4054,
+          "count": 4054,
+          "mae": 0.04144854791056113,
+          "rmse": 0.3056220182695894
+        }
+      },
+      "common_target_count": 2428,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 2428,
+          "mae": 0.002896210873146622,
+          "rmse": 0.06231775406069835
+        },
+        "seasonal_naive": {
+          "count": 2428,
+          "mae": 1.1107693574958801,
+          "rmse": 3.2248001197269733
+        },
+        "ridge": {
+          "count": 2428,
+          "mae": 0.026403396051390915,
+          "rmse": 0.06428873669515947
+        }
+      }
+    },
+    {
+      "origin_id": "D5",
+      "status": "COMPLETED",
+      "failure_reason": null,
+      "training_target_eligible_count": 1055970,
+      "training_feature_eligible_count": 42650,
+      "start_inclusive": "2020-07-01",
+      "end_exclusive": "2020-07-15",
+      "candidate_issue_count": 92482,
+      "valid_target_pair_count": 90357,
+      "training_sample_count": 42650,
+      "scaler_fit_row_count": 42650,
+      "ridge_features": [
+        "TP2_lag_10s",
+        "TP2_lag_60s",
+        "TP2_lag_300s",
+        "TP3_lag_60s",
+        "TP3_lag_300s",
+        "Motor_current_lag_60s",
+        "Motor_current_lag_300s"
+      ],
+      "ridge_params": {
+        "alpha": 1.0,
+        "fit_intercept": true,
+        "solver": "svd"
+      },
+      "method_metrics": {
+        "persistence": {
+          "prediction_count": 92482,
+          "coverage_candidate_issues": 1.0,
+          "valid_scored_count": 90357,
+          "count": 90357,
+          "mae": 2.4863625618380425,
+          "rmse": 4.817418582309647
+        },
+        "seasonal_naive": {
+          "prediction_count": 46086,
+          "coverage_candidate_issues": 0.4983239981834303,
+          "valid_scored_count": 45197,
+          "count": 45197,
+          "mae": 2.30324941920924,
+          "rmse": 4.6374689173823676
+        },
+        "ridge": {
+          "prediction_count": 47,
+          "coverage_candidate_issues": 0.0005082070024437187,
+          "valid_scored_count": 47,
+          "count": 47,
+          "mae": 2.36127525032739,
+          "rmse": 4.3688748663295405
+        }
+      },
+      "common_target_count": 23,
+      "common_target_metrics": {
+        "persistence": {
+          "count": 23,
+          "mae": 1.6706086956521742,
+          "rmse": 3.868506014291395
+        },
+        "seasonal_naive": {
+          "count": 23,
+          "mae": 1.671130434782609,
+          "rmse": 3.8691942763094858
+        },
+        "ridge": {
+          "count": 23,
+          "mae": 1.566152805359842,
+          "rmse": 3.584900420390329
+        }
+      }
+    }
+  ],
+  "raw_predictions_sha256": "c53e94087feb4c2bd10cab0df0c3e08f4364f2eb97f10c22d9508575fe20d586",
+  "metrics_sha256": "1c97599d08311a2cadca555313ee1ab87d7c3648539e34f73235c316dafde641",
+  "runtime_seconds": 44.66102754200256,
+  "run_status": "PARTIAL"
+}
