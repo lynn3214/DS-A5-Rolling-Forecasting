@@ -1,0 +1,18 @@
+origin_id,stratifier,stratum,candidate_issue_count,feature_eligible_issue_count,feature_eligibility_rate,ridge_available_count,ridge_scored_count,motor_current_median_A,regime_interpretation
+F1,issue_COMP,0.0,3444,4,0.0011614401858304297,4,4,5.9725,Descriptive association only; COMP and continuity are not causal explanations.
+F1,issue_COMP,1.0,25132,13,0.0005172688206270889,13,13,0.0424999999999995,Descriptive association only; COMP and continuity are not causal explanations.
+F2,issue_COMP,0.0,4502,0,0.0,0,0,5.9975000000000005,Descriptive association only; COMP and continuity are not causal explanations.
+F2,issue_COMP,1.0,35641,25,0.0007014393535534918,25,21,0.0449999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F3,issue_COMP,0.0,4658,3,0.0006440532417346501,3,3,5.984999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F3,issue_COMP,1.0,32411,6,0.00018512233500971893,6,6,0.0449999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F4,issue_COMP,0.0,4388,0,0.0,0,0,5.99,Descriptive association only; COMP and continuity are not causal explanations.
+F4,issue_COMP,1.0,24777,17,0.0006861201921136538,17,17,0.0424999999999995,Descriptive association only; COMP and continuity are not causal explanations.
+F5,issue_COMP,0.0,4862,0,0.0,0,0,5.986249999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F5,issue_COMP,1.0,32389,0,0.0,0,0,0.0449999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F1,gap_in_lookback_300s,False,28576,17,0.0005949048152295633,17,17,0.0449999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F2,gap_in_lookback_300s,False,40123,25,0.0006230840166488049,25,21,0.0449999999999999,Descriptive association only; COMP and continuity are not causal explanations.
+F2,gap_in_lookback_300s,True,20,0,0.0,0,0,3.723750000000001,Descriptive association only; COMP and continuity are not causal explanations.
+F3,gap_in_lookback_300s,False,37043,9,0.00024296088329778904,9,9,0.0475000000000003,Descriptive association only; COMP and continuity are not causal explanations.
+F3,gap_in_lookback_300s,True,26,0,0.0,0,0,3.8337499999999993,Descriptive association only; COMP and continuity are not causal explanations.
+F4,gap_in_lookback_300s,False,29165,17,0.0005828904508829076,17,17,3.6575000000000006,Descriptive association only; COMP and continuity are not causal explanations.
+F5,gap_in_lookback_300s,False,37251,0,0.0,0,0,3.6275,Descriptive association only; COMP and continuity are not causal explanations.

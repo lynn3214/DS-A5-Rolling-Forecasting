@@ -1,0 +1,16 @@
+{
+  "status": "DESCRIPTIVE_OFFLINE_REPLAY_ONLY",
+  "rule": "Use saved Ridge prediction when available; otherwise use saved persistence prediction.",
+  "eligible_target_count": 169215,
+  "fallback_trigger_count": 169151,
+  "fallback_trigger_fraction_of_valid_targets": 0.9996217829388647,
+  "prediction_coverage_after_replay": 1.0,
+  "scored_count": 169215,
+  "mae": 2.1852412089889395,
+  "rmse": 4.5284578164252824,
+  "caveats": [
+    "This policy was not implemented or live-tested.",
+    "This is an explicitly permitted retrospective availability replay, not a new confirmatory model comparison.",
+    "Persistence and labels rely on the frozen zero-additional-latency retrospective assumption."
+  ]
+}

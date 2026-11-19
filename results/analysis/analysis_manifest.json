@@ -1,0 +1,134 @@
+{
+  "phase": "3",
+  "status": "PASS_WITH_LIMITATIONS",
+  "dataset": "MetroPT-3",
+  "dataset_sha256": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+  "source_hashes": {
+    "data/raw/metropt3/MetroPT3(AirCompressor).csv": "db30ccb4ea402e3c8bf2c99db06e288d4f2a772f6928f9dbe26a920d69793e24",
+    "results/rolling/development_predictions.csv": "c53e94087feb4c2bd10cab0df0c3e08f4364f2eb97f10c22d9508575fe20d586",
+    "results/rolling/development_metrics.json": "1c97599d08311a2cadca555313ee1ab87d7c3648539e34f73235c316dafde641",
+    "results/rolling/final_predictions.csv": "e2cdf4de6f838f8f06d241149e514d09bc33e0192ac5073b7d1e02e83a12db41",
+    "results/rolling/final_metrics.json": "6af02ab6d02e491b622f66d3b0b45b62a871a6c264f917c92d519ced2f9f4d11"
+  },
+  "prediction_rows": {
+    "prediction_rows": 1986765,
+    "issue_rows": 662255,
+    "scored_rows": 974832
+  },
+  "protocol_commit": "ca83f0a295a68337aebc070cfd481645418cda13",
+  "analysis_script_sha256": "6481b5d945482461a39cc83994d6bc1fd3729de5bd41d73741ae25e42046b121",
+  "dataset_overview": {
+    "row_count": 1516948,
+    "timestamp_min_naive": "2020-02-01 00:00:00",
+    "timestamp_max_naive": "2020-09-01 03:59:50",
+    "timestamp_order_monotonic": true,
+    "duplicate_timestamp_extra_rows": 0,
+    "sensor_missing_value_total": 0,
+    "sensor_missing_counts": {
+      "TP2": 0,
+      "TP3": 0,
+      "Motor_current": 0,
+      "Oil_temperature": 0,
+      "H1": 0,
+      "DV_pressure": 0,
+      "Reservoirs": 0,
+      "COMP": 0,
+      "DV_eletric": 0,
+      "Towers": 0,
+      "MPG": 0,
+      "LPS": 0,
+      "Pressure_switch": 0,
+      "Oil_level": 0,
+      "Caudal_impulses": 0
+    },
+    "sampling_interval_seconds": {
+      "median": 10.0,
+      "p05": 9.0,
+      "p95": 10.0
+    },
+    "intervals_over_60_seconds": 331,
+    "intervals_over_60_seconds_rate": 0.00021820142694504158,
+    "timestamp_semantics": "Naive event-time values; source file index is not used as elapsed time."
+  },
+  "critical_period_source_url": "https://archive.ics.uci.edu/dataset/791/metropt%2B3%2Bdataset",
+  "critical_period_timestamp_basis": "UCI company-report windows are interpreted as naive timestamps and assigned by forecast issue time; timezone alignment is unverified.",
+  "metric_definitions": {
+    "MAE": "mean absolute (prediction - observed TP2) among available predictions with valid target pairs",
+    "RMSE": "square root of mean squared (prediction - observed TP2) on the same scored rows",
+    "paired_error_difference": "seasonal-naive absolute error minus persistence absolute error, paired on origin_id + issue_row + actual target_row"
+  },
+  "pairing_identity": "origin_id + issue_row + actual target_row",
+  "execution_command": "conda run -n nussem1 python scripts/analyze_phase3.py",
+  "verification": {
+    "input_hashes_match_phase2b_audit": true,
+    "paired_rows_use_exact_identity": true,
+    "invalid_targets_excluded": true,
+    "unavailable_predictions_not_zero_errors": true,
+    "all_methods_per_issue": true,
+    "metrics_recomputed_from_saved_predictions": true,
+    "saved_metric_recalculations_passed": 72
+  },
+  "versions": {
+    "python": "3.10.18",
+    "numpy": "2.2.6",
+    "pandas": "2.3.1",
+    "matplotlib": "3.10.5"
+  },
+  "critical_period_events": [
+    {
+      "event_id": "UCI_failure_1a",
+      "report_number": "1 (first row)",
+      "start": "2020-04-18 00:00:00",
+      "end": "2020-04-18 23:59:00",
+      "event": "Air leak; high stress",
+      "source_note": "The UCI table labels this row Report #1."
+    },
+    {
+      "event_id": "UCI_failure_1b",
+      "report_number": "1 (second row)",
+      "start": "2020-05-29 23:30:00",
+      "end": "2020-05-30 06:00:00",
+      "event": "Air leak; high stress",
+      "source_note": "The UCI table also labels this row Report #1 and appends 'Maintenance on 30Apr at 12:00', which predates the reported failure window; unresolved."
+    },
+    {
+      "event_id": "UCI_failure_3",
+      "report_number": "3",
+      "start": "2020-06-05 10:00:00",
+      "end": "2020-06-07 14:30:00",
+      "event": "Air leak; high stress",
+      "source_note": "The UCI table reports maintenance on 8Jun at 16:00."
+    },
+    {
+      "event_id": "UCI_failure_4",
+      "report_number": "4",
+      "start": "2020-07-15 14:30:00",
+      "end": "2020-07-15 19:00:00",
+      "event": "Air leak; high stress",
+      "source_note": "The UCI table reports maintenance on 16Jul at 00:00."
+    }
+  ],
+  "assumptions_and_limits": [
+    "Source and UCI event timestamps are naive; timezone/alignment cannot be established.",
+    "Rows are strongly serially dependent and forecast horizons overlap; forecast rows are not independent replicates.",
+    "Failure windows are retrospective labels, not verified event truth at the sensor clock.",
+    "Rolling origin metrics are descriptive; no causal drift attribution or deployment threshold validation is performed.",
+    "Daily Ridge metrics are shown only with explicit scored sample counts; zero-coverage days remain missing metrics."
+  ],
+  "outputs": {
+    "results/analysis/paired_baseline_comparison.csv": "dd7251ad893263ebf814675c726bef0e7cd1664158a69fe71df79530d393614a",
+    "results/analysis/paired_baseline_pairs.csv": "bb7eda2d4eed94ecc00a698d3d896b27b9651e45510cdb38e6459ade4dcca0ee",
+    "results/analysis/error_coverage_by_day.csv": "b40bd7655569327d271c5dd6157cfb3e5e0b6af6f443c272ae2dd8d26bd491f1",
+    "results/analysis/origin_metric_coverage_summary.csv": "6252bca3a4a313eb0bf6e9beace4e88f73109baf44a45b264f9a63e588f25d5f",
+    "results/analysis/drift_summary.csv": "d757ef47f15091c8f62ea8789deab371a207551c55abf49488e446bb45529147",
+    "results/analysis/ridge_availability_by_regime.csv": "6dfcf058c134db0ff8cada014ab7721362b751bf5b115ff68ac5b77071621b19",
+    "results/analysis/critical_period_summary.csv": "b626ec87b9484f140411b00ff5184ae7c51355eabf6bbd2030a369081feb6782",
+    "results/analysis/figures/phase3_daily_mae_final.png": "f1443d0f85b2bf860996c360d42b9769a41a0686194dd96b075b1150464a2fc5",
+    "results/analysis/figures/phase3_daily_coverage_final.png": "62858c13a8197d28991455b924912a1e67d0ebc439c19ab4a000aa2d58736317",
+    "results/analysis/figures/phase3_final_origin_metrics.png": "4ab7b9cc3199585d48a2f87fabb307ee789f1fd0c4df14b6e1eb6edb463fc103",
+    "results/analysis/figures/phase3_final_error_distributions.png": "431930854d3103f7575d4896db24291a50c272bfc6bef2d71376de07908d3872",
+    "results/analysis/figures/phase3_monthly_drift_overview.png": "1bbb73b53bfa3639d2b2bd41c57636d639e23800582939f484c894ec64670030",
+    "results/analysis/figures/phase3_paired_baseline_error_difference.png": "23c08919b49d6e7c3ab546b446479d5c895e954f9e7fdd5d7cd28f3f4c7d4038",
+    "results/analysis/fallback_replay_summary.json": "ceeaaef28930a66865f58c0c76abda76646ae237800759b49c7f41f135f2c358"
+  }
+}
