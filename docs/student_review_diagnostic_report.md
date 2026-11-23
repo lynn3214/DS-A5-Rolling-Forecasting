@@ -26,7 +26,7 @@ The three distinct lag offsets have the following per-feature eligibility counts
 | May | 212,800 | 195,208 | 107,129 | 12,456 | 12,136 (5.703%) | 52 | 9 / 10 / 12 |
 | Jun | 216,514 | 199,542 | 113,078 | 22,970 | 21,204 (9.793%) | 38 | 9 / 10 / 12 |
 | Jul | 222,638 | 203,476 | 107,563 | 4,493 | 4,122 (1.851%) | 64 | 9 / 10 / 10 |
-| Aug | 220,434 | 201,098 | 104,596 | 375 | 94 (0.043%) | 43 | 9 / 10 / 10 |
+| Aug | 220,434 | 201,098 | 104,596 | 125 | 94 (0.043%) | 43 | 9 / 10 / 10 |
 
 The monthly 300-second TP2-lag lookup illustrates the mechanism. In August, 220,249 of 220,434 candidates had a past observation more than five seconds before the requested timestamp; only 185 had a match with age 0–5 seconds, and 60 of those otherwise timely/finite cases crossed a prohibited historical gap, leaving 125 eligible for that single lag. For the same August candidates, 10-second eligibility was 201,098 and 60-second eligibility 104,596. The median sampling interval remained 10 seconds, with q05/q95 of 9/10 seconds, but a 10-second median does not guarantee phase alignment at a 300-second historical request. February had no final 300-second-lag eligibility; March had 234. Across the months, 300-second eligibility varied from zero to 22,970 while the median interval remained 10 seconds.
 

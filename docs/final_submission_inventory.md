@@ -1,6 +1,6 @@
 # DS-A5 Final Submission Inventory
 
-This inventory separates the intended GitHub package, recommended Drive materials, SPAIQ fields, and local-only data. The working tree is not committed or pushed. Items marked for GitHub are candidates for a reviewed commit; the `Current state` column identifies additions that are not yet tracked.
+This inventory separates the GitHub package, recommended Drive materials, SPAIQ fields, and local-only data. The final project package was committed and pushed to `origin main` in commit `fe7dda6c34e0d38c291fcb780e366381585a08e0`. GitHub publication is separate from Google Drive and SPAIQ course submission, which remain pending. The `Current state` column records the package status.
 
 ## A. GitHub deliverables
 
@@ -14,21 +14,21 @@ These files are already tracked in the local Git history and should remain in th
 - Core documents: `docs/alternative_dataset_audit.md`, `docs/candidate_comparison.md`, `docs/dataset_selection.md`, `docs/feasibility_audit.md`, `docs/sources.md`, `docs/artifact_registry.md`, `docs/forecasting_task_definition.md`, `docs/evaluation_protocol_v1.md`, `docs/evaluation_protocol_freeze_manifest.json`, `docs/feature_availability.md`, `docs/protocol_freeze_checklist.md`, `docs/protocol_freeze_review.md`, `docs/phase2b_execution_report.md`, `docs/phase2b_technical_audit.md`, `docs/phase3_drift_failure_analysis.md`, `docs/monitoring_fallback_plan.md`, and `docs/ai_use_log.md`.
 - Compact results: `results/audit/` summary tables/JSON; `results/analysis/` compact tables, manifest, summaries, and figures; and `results/rolling/` metrics, manifests, execution logs, and verification records. Large row-level prediction CSVs are excluded.
 
-### Final package and post-freeze evidence to review for the next commit
+### Final package and post-freeze evidence
 
 | File or group | Purpose | Current state |
 |---|---|---|
-| `notebooks/DS_A5_rolling_forecasting.ipynb` | Executable, clean-kernel-reviewed assignment notebook | Untracked; intended deliverable |
-| `submission/DS_A5_rolling_forecasting.pdf` | Rendered assignment report | Untracked; intended deliverable |
-| `submission/spaiq_submission_draft.md` | Platform summary draft; contains an intentional Drive placeholder | Untracked; retain as a draft, do not represent as submitted |
-| `docs/phase4a_notebook_review.md`, `docs/phase4b_submission_review.md` | Historical construction and packaging checks | Untracked; preserve as review history |
-| `docs/student_independent_review.md`, `docs/student_review_diagnostic_report.md` | Student-originated review record and post-hoc diagnostic report | Untracked; review traceability |
-| `docs/phase5b_student_revision_report.md`, `docs/phase5c_review_closeout.md` | Scientific revision and student-review closeout | Untracked; review traceability |
-| `docs/phase6a_final_repository_audit.md`, `docs/final_submission_inventory.md` | Current pre-submission audit and this inventory | Untracked; this audit deliverable |
-| `scripts/verify_student_review_findings.py`, `tests/test_student_review_diagnostics.py`, `results/student_review_diagnostics/` | Reproducible Phase 5A post-hoc checks, tests, compact outputs, and manifest | Untracked; preserve if including the student-requested verification evidence |
-| `scripts/revise_notebook_phase5b.py` | One-time Notebook revision helper; not required to run the final Notebook | Untracked; include only if retaining the revision-provenance helper is desired |
+| `notebooks/DS_A5_rolling_forecasting.ipynb` | Executable, clean-kernel-reviewed assignment notebook | Committed and pushed in `fe7dda6` |
+| `submission/DS_A5_rolling_forecasting.pdf` | Rendered assignment report | Committed and pushed in `fe7dda6` |
+| `submission/spaiq_submission_draft.md` | Platform summary draft; contains an intentional Drive placeholder | Committed and pushed in `fe7dda6`; draft only, not submitted |
+| `docs/phase4a_notebook_review.md`, `docs/phase4b_submission_review.md` | Historical construction and packaging checks | Committed and pushed in `fe7dda6` |
+| `docs/student_independent_review.md`, `docs/student_review_diagnostic_report.md` | Student-originated review record and post-hoc diagnostic report | Committed and pushed in `fe7dda6` |
+| `docs/phase5b_student_revision_report.md`, `docs/phase5c_review_closeout.md` | Scientific revision and student-review closeout | Committed and pushed in `fe7dda6` |
+| `docs/phase6a_final_repository_audit.md`, `docs/final_submission_inventory.md` | Final pre-submission audit and inventory | Committed and pushed in `fe7dda6` |
+| `scripts/verify_student_review_findings.py`, `tests/test_student_review_diagnostics.py`, `results/student_review_diagnostics/` | Reproducible Phase 5A post-hoc checks, tests, compact outputs, and manifest | Committed and pushed in `fe7dda6` |
+| `scripts/revise_notebook_phase5b.py` | One-time Notebook revision helper; not required to run the final Notebook | Optional local helper; excluded from the final package and remains untracked |
 
-The present `git status` also shows pre-existing working-tree changes to `README.md`, `requirements.txt`, and `docs/ai_use_log.md`. Review their diffs before staging. Do not stage `data/raw/` or the ignored row-level prediction exports. `git diff --stat` omits untracked files; inspect the status and candidate files directly before a commit.
+The final package excludes `data/raw/` and ignored row-level prediction exports. The optional one-time revision helper is not part of the package. Review `git status` before any later repository changes.
 
 ## B. Google Drive written materials
 
@@ -70,7 +70,7 @@ Create the course folder, share it with `tiejianluo@gmail.com` as Viewer accordi
 | Student full name | Not supplied; enter manually on the course platform |
 | Student ID | Not supplied; enter manually on the course platform |
 
-The Git remote is configured to the listed GitHub repository. Its current remote branch state and public access were not verified because DNS resolution for `github.com` failed in the sandbox and the permitted read-only remote query did not complete. No push or platform submission was performed.
+The final project package was pushed to the configured GitHub repository in commit `fe7dda6c34e0d38c291fcb780e366381585a08e0`. This records the GitHub code push only; it does not indicate a Google Drive upload or SPAIQ submission.
 
 ## D. Local-only excluded artifacts
 
@@ -90,10 +90,9 @@ The MetroPT-3 CSV and prediction files are present locally. `.gitignore` exclude
 
 ### Before submission
 
-- [ ] Review the final uncommitted diff and all untracked files; confirm the intended commit list and exclude raw data and large prediction exports.
+- [ ] Before any later repository changes, review the diff and untracked files; continue excluding raw data and large prediction exports.
 - [ ] Verify the local Notebook/PDF SHA-256 values against the current audit report.
-- [ ] Confirm the requested repository changes are committed only after explicit student authorization.
-- [ ] Confirm GitHub access settings; push only after authorization and verify the pushed commit and required files on GitHub.
+- [x] Final project package committed as `fe7dda6c34e0d38c291fcb780e366381585a08e0` and pushed to `origin main`.
 - [ ] Create the Drive folder and upload the selected PDF and Markdown/supporting materials.
 - [ ] Share the folder with `tiejianluo@gmail.com` as Viewer and personally verify instructor access.
 - [ ] Enter the student's full name and ID, assignment number/type, title, summary, Drive link, and GitHub link in the course platform.
@@ -105,4 +104,4 @@ The MetroPT-3 CSV and prediction files are present locally. `.gitignore` exclude
 - [ ] Preserve the platform confirmation/receipt and final Git commit identifier.
 - [ ] Recheck that uploaded PDF and repository Notebook correspond to the reviewed hashes; record any later changes explicitly.
 
-No commit, push, Drive upload, or SPAIQ submission is recorded as complete in this inventory.
+The final project commit and GitHub push are complete. Google Drive upload and SPAIQ submission remain pending student action.
