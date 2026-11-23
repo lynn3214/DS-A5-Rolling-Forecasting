@@ -4,12 +4,13 @@ This is a factual summary of assistance in the DS-A5 repository. It does not rec
 
 | Work | AI assistance | Human review/status |
 |---|---|---|
+| Research planning | Codex helped frame the retrospective compressor-pressure question, assess candidate data, and organize the feasibility, protocol, evaluation, and monitoring work into reviewable stages. | User reviewed and directed the staged scope. No claim is made that AI selected the scientific question without human review. |
 | Dataset feasibility | Codex inspected official NOAA/UCI sources, audited supplied local MetroPT-3 and UR3 data, and recorded access limitations and provenance. | User supplied local files and reviewed dataset-selection recommendations. NOAA ERDDAP access remained blocked. |
 | Temporal protocol | Codex developed timestamp matching, gap, origin, availability, and leakage specifications and diagnostics. | ChatGPT independent analysis was reviewed by the user; the user explicitly approved freezing Evaluation Protocol v1.0 in the supplied request. |
 | Code review and tests | Codex implemented non-modeling diagnostics and deterministic timestamp tests. | Tests and local integrity checks were executed and recorded; forecasting models were not trained. |
 | Protocol freeze | Codex prepared the freeze manifest and repository commit. | User authorization was provided for protocol freezing and a local first commit. No GitHub push was performed. |
 
-No final forecasting results exist in this phase. No claim is made that such results or a final notebook were manually reviewed.
+At the initial dataset-feasibility stage, no final forecasting results existed. Later implementation, analysis, and review work is disclosed in the phase-specific entries below. No claim is made that the student manually reviewed results before that review occurred.
 
 ## Phase 2B execution
 
@@ -18,3 +19,49 @@ Codex implemented reusable feature construction, baselines, expanding rolling-or
 ## Phase 3 descriptive analysis
 
 Codex added `scripts/analyze_phase3.py` and generated paired Persistence/Seasonal-naive comparison tables, exact issue/target-pair error differences, daily and per-origin error/coverage summaries, monthly and frozen-window sensor/state/gap summaries, a retrospective UCI critical-period subgroup table, figures, an explicitly labeled offline Ridge-to-Persistence replay, and an analysis manifest. The analysis verified the original data and four prediction/metric file hashes, paired baselines by `origin_id + issue_row + actual target_row`, and recomputed development/final per-origin and pooled metrics (72 checks). It did not fit, refit, tune, or select forecasting models, modify the frozen protocol, or change saved predictions/metrics. The explicit fallback replay followed the frozen protocol's allowed retrospective diagnostic and is not described as deployed or validated. The user-provided constraints to avoid causal claims, final-period tuning, iid uncertainty claims, and false zero-error imputation were followed. No model/feature/horizon or deployment-threshold changes were implemented. Verification results and unresolved timestamp/publication-time limitations are documented in the Phase 3 report and manifest. An independent review accepted the Phase 3 artifacts for submission preparation; it did not independently rerun the complete raw-data analysis. No claim is made that the Phase 3 analyses were fully independently replicated or that final assignment results received complete human review.
+
+## Phase 4A notebook construction
+
+Codex assembled `notebooks/DS_A5_rolling_forecasting.ipynb` from the frozen protocol, original source data, and previously audited Phase 2B/3 summaries. It did not train or tune models. Codex executed all notebook code cells in a fresh `nussem1` kernel, checked source/artifact hashes and table invariants, and ran the repository test suite. The notebook references the official assignment catalog and submission guide. At the Phase 4A checkpoint, the user reported that the Notebook passed an independent structural/content review; Codex did not conduct that independent review. Final student review was pending at that checkpoint.
+
+## Phase 4B submission preparation
+
+Codex rechecked the current official assignment and submission pages, excluded the CSV file-index column from sensor-field counts, removed personal absolute paths from saved Notebook outputs, and clarified that both review and full reproduction require a locally obtained MetroPT-3 CSV. It corrected the Ridge lag-funnel display to use actual saved audit stage names, then executed all Notebook code cells in a fresh `nussem1` kernel and reran the repository tests. Codex exported the Notebook using nbconvert WebPDF/Chromium after identifying that the initial LaTeX route rendered Pandas Styler tables as object descriptions. The WebPDF was rendered and visually inspected across all pages; tables, plots, page breaks, and local-path exclusion were checked. Codex created a draft SPAIQ summary and manual checklist. No Google Drive upload, GitHub push, SPAIQ submission, commit, or tag was performed. At the Phase 4B checkpoint, final student review and manual submission actions were pending.
+
+## Student Independent Verification and Critical Review
+
+### A. Student-reported independent checks
+
+The student reported personally reviewing the Notebook and repository with a structured checklist. The student's record marks A1–A4, B2–B4, and C1–C6 as passed: artifact/version consistency; clean-kernel execution; data hashes/environment; Git and excluded-large-artifact reproducibility; empirical data quality/sampling intervals; horizon, target matching and temporal boundaries; seven lag features and historical availability; rolling-origin separation; Ridge preprocessing/training isolation; D1 failure and Ridge coverage; counts and independent MAE/RMSE calculation; paired comparisons; and negative/unavailable predictions. B1 dataset suitability was reported **PARTIAL**. These are reported student checks. No exact student command lines, dates for those executions, terminal logs, or calculation traces were supplied, so none are invented here.
+
+The student also independently reviewed the Phase 5B Notebook/PDF, accepted four review dimensions, requested a Section 9 explanation of the June baseline-error reversal, and then explicitly accepted that clarification. The student's final Section 5C acceptance is recorded in `docs/student_independent_review.md`. It establishes acceptance of the revision content, not personal execution of Codex's follow-up scripts/tests or inspection of the latest PDF render.
+
+### B. Student-originated questions
+
+The 18 concerns in `docs/student_independent_review.md` originated from the student's review, not from Codex's independent discovery. They cover forecast availability; five-second lookup tolerance versus approximately ten-second sampling; possible timestamp alignment; differences between training/evaluation feature eligibility; sparse period-specific Ridge eligibility; TP2 marginal values versus MAE; the June error reversal; paired-error tails; F2's selected 18-row comparison; operating-state mixture versus sensor drift; generic disclaimers; imperative/developer-facing prose; evidence-specific conclusions; excessive MLOps vocabulary; repetitive verification text; repeated Ridge caveats; repeated timestamp caveats; and an overly dense overview. The Phase 5B traceability table maps all 18 concerns to revised sections and dispositions.
+
+### C. Student-requested AI-assisted follow-up
+
+Codex performed Phase 5A post-hoc diagnostics using `scripts/verify_student_review_findings.py`; the methods, outputs, earlier failed attempt, and final verification are preserved in `docs/student_review_diagnostic_report.md` and `results/student_review_diagnostics/diagnostic_manifest.json`. The student did not report personally running that script. The manifest records 1,246 deterministic scalar lookup parity cases, 84 monthly/frozen-window feature-period decompositions, exact D1–D5/F1–F5 expanding training-count reconciliation, exact paired identities, and the F2 baseline-pair count (22,979) and all-method identity count (18). The diagnostic run and three focused tests were executed by Codex; the recorded test outcome was 13 passed.
+
+Verified retrospective observations include:
+
+- August had 220,434 candidate issue times. For the TP2 300-second lag, 220,249 selected past observations were older than five seconds; 185 had age within zero to five seconds; 60 of those were rejected by the historical-gap rule; 125 were eligible. Only 94 issue times had all seven features eligible. This supports lookup-age alignment as the observed primary bottleneck in these archive timestamps. It is not independent evidence of physical clock drift or historical real-time availability.
+- All ten D1–D5/F1–F5 expanding training counts reconstructed by the diagnostic matched saved Phase 2B values. These are cumulative pre-origin training populations, not single-month cohorts.
+- Across 77,165 final paired Persistence/Seasonal-naive forecasts, mean seasonal-minus-persistence absolute-error difference was approximately −0.2662 bar; median was 0; IQR was approximately −0.002 to +0.002 bar. Tail contributions are material, but the report does not claim that a tiny number of rows entirely explains the difference.
+- At F2, seasonal-naive had lower MAE than persistence on 22,979 paired baseline forecasts. Their ordering reversed on only 18 selected all-method common forecasts. This is a population-selection observation, not evidence of general model superiority.
+- The retrospective June 5–7 group has 14,274 paired forecasts, Persistence MAE 0.6333 bar, and Seasonal-naive MAE 4.4586 bar. Across each of the five final origins, Seasonal-naive has lower paired MAE on shared targets. Codex added the contrast and uncertainty in Notebook Section 9 after the student requested it. The reason remains unknown; operating-state, short-term dynamics, and daily-pattern explanations were not isolated or causally tested; UCI event-time alignment remains uncertain.
+
+Codex's Phase 5B edits revised research prose, clarified population denominators and temporal availability, added the post-hoc diagnostic evidence, and regenerated the Notebook/PDF. The final student-requested Section 9 wording was accepted by the student. No new model was trained, no frozen experimental result was changed, and no protocol or Phase 5A diagnostic artifact was modified.
+
+### D. Student decisions and scientific boundaries
+
+The student rejected presenting a fixed 50% historical matching probability as fact. The preserved written review records the broader request to avoid unverified probability arguments; no measurement is attributed to that percentage. The observed five-second lookup-age rule is described from executed diagnostics rather than converted into a generic probability estimate.
+
+The student accepted the revised availability explanation, paired-error/tail and F2 population discussion, overview/conclusions, Notebook/PDF consistency and presentation, and, after requesting added context, the Section 9 critical-period reversal explanation. These acceptances are distinct from running the diagnostic code. Physical clock drift, historical publication latency, operating-regime causation, failure truth/clock alignment, engineering acceptability, and live fallback performance remain unestablished. The final Section 9 text explicitly does not attribute the errors to the reported equipment fault.
+
+### E. Final verification attribution and pending actions
+
+Student-reported checklist checks and student acceptance are documented separately from Codex-executed analysis and technical verification. Codex's latest clean-kernel run, existing test suite, hash checks, WebPDF export, and rendered-page inspection are recorded in `docs/phase5c_review_closeout.md`; the student did not report repeating those technical steps after the latest export. The student accepted the final clarification, but the document does not claim an independent student rendering check of the regenerated PDF.
+
+The scientific evaluation verdict remains **PARTIAL**. The accepted editorial/scientific clarifications do not cure these limits: Ridge final scored coverage is 64, D1 has no Ridge training rows, F5 has zero Ridge predictions, only 27 targets are common to all three final methods, timestamps are naive, release latency and physical clock behavior are unknown, the retrospective failure window's sensor-clock alignment is uncertain, overlapping forecasts are serially dependent, drift/event interpretations are noncausal, and offline fallback has not been live-validated. The repository is not externally submitted: no commit/push, Drive upload, or SPAIQ submission was performed. The manual submission checklist remains a student action.

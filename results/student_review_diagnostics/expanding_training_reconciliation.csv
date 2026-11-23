@@ -1,0 +1,11 @@
+phase,origin_id,origin,training_issue_lt_origin,actual_label_le_origin,target_and_gap_eligible_count,feature_eligible_training_count_reconstructed,saved_phase2b_training_sample_count,count_match
+development,D1,2020-03-01,True,True,212356,0,0,True
+development,D2,2020-04-01,True,True,439183,158,158,True
+development,D3,2020-05-01,True,True,633965,9986,9986,True
+development,D4,2020-06-01,True,True,842555,21568,21568,True
+development,D5,2020-07-01,True,True,1055970,42650,42650,True
+final,F1,2020-08-01,True,True,1273871,46711,46711,True
+final,F2,2020-08-07,True,True,1310538,46728,46728,True
+final,F3,2020-08-13,True,True,1358562,46749,46749,True
+final,F4,2020-08-19,True,True,1402887,46784,46784,True
+final,F5,2020-08-25,True,True,1440152,46801,46801,True

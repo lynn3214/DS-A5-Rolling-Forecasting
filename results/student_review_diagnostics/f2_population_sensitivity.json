@@ -1,0 +1,55 @@
+[
+  {
+    "population":"persistence_seasonal_pairs",
+    "identity_key":"origin_id + issue_row + actual target_row",
+    "identity_count":22979,
+    "method_metrics":{
+      "persistence":{
+        "count":22979,
+        "mae":2.0514889247,
+        "rmse":4.3928507212
+      },
+      "seasonal_naive":{
+        "count":22979,
+        "mae":1.9023377867,
+        "rmse":4.2239347852
+      }
+    },
+    "issue_to_target_tp2_change_bar":null
+  },
+  {
+    "population":"all_three_common",
+    "identity_key":"origin_id + issue_row + actual target_row",
+    "identity_count":18,
+    "method_metrics":{
+      "persistence":{
+        "count":18,
+        "mae":0.0017777778,
+        "rmse":0.0024037009
+      },
+      "seasonal_naive":{
+        "count":18,
+        "mae":2.1004444444,
+        "rmse":4.452410633
+      },
+      "ridge":{
+        "count":18,
+        "mae":0.2526001141,
+        "rmse":0.4829000381
+      }
+    },
+    "issue_to_target_tp2_change_bar":null
+  },
+  {
+    "population":"all_three_common_descriptive_target_change",
+    "identity_key":"18 all-three common issue\/target pairs",
+    "identity_count":18,
+    "method_metrics":null,
+    "issue_to_target_tp2_change_bar":{
+      "median":0.001,
+      "min":-0.006,
+      "max":0.004,
+      "abs_median":0.002
+    }
+  }
+]
